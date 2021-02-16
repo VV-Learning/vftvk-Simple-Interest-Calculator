@@ -1,6 +1,12 @@
 function compute()
 {
     var principal = document.getElementById("principal").value;
+    //Check if principal field is zero ir negative
+        if(principal <= 0){
+            alert("Please enter principal");
+            principal.focus();
+            return false;
+          }
     var rate = document.getElementById("rate").value;
     var years = document.getElementById("years").value;
     var interest = principal*years*rate/100;
