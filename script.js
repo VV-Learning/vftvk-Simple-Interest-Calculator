@@ -3,7 +3,7 @@ function compute()
     var principal = document.getElementById("principal").value;
     //Check if principal field is zero ir negative
         if(principal <= 0){
-            alert("Please enter principal");
+            alert("Please enter a positive number");
             principal.focus();
             return false;
           }
@@ -14,9 +14,8 @@ function compute()
     var date = new Date();
     var currentyear = date.getFullYear();
     var lastyear = Number(currentyear) + Number(years);
-     
-    
-   document.getElementById("result").innerHTML="If you deposit " + principal + ", at an interest rate of " + rate + "%, You will receive an interest of " + interest + ", i.e. a total amount of " + Amount + " in the year " + lastyear;
+         
+   document.getElementById("result").innerHTML="If you deposit <mark>" + principal + "</mark>, <br>at an interest rate of <mark>" + rate + "</mark>%, <br>You will receive an interest of <mark>" + interest + "</mark>,<br>i.e. a total amount of <mark>" + Amount + "</mark> in the year <mark>" + lastyear + "</mark>.";
 }
 
 function show_value(x)
